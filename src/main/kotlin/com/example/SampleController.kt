@@ -20,7 +20,13 @@ class SampleController {
     @Serdeable
     data class SamplePayload(
         val stringA: String?,
-        val stringB: String?
+        val stringB: String?,
+        val nestedObject: NestedPayload?
+    )
+
+    @Serdeable
+    data class NestedPayload(
+        val nestedString: String?
     )
 }
 

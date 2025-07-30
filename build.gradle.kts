@@ -11,9 +11,7 @@ version = "0.1"
 group = "com.example"
 
 val kotlinVersion = project.properties.get("kotlinVersion")
-repositories {
-    mavenCentral()
-}
+
 
 dependencies {
     ksp("io.micronaut.serde:micronaut-serde-processor")
@@ -22,6 +20,7 @@ dependencies {
     implementation("io.micronaut:micronaut-http-client")
     testImplementation("io.micronaut.test:micronaut-test-rest-assured")
     testImplementation("net.javacrumbs.json-unit:json-unit:4.1.1")
+    implementation("com.github.micronaut-projects:micronaut-serialization:2.15.x-SNAPSHOT")
 }
 
 
